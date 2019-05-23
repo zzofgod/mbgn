@@ -1,0 +1,46 @@
+create database users DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+default-character-set = utf8;
+use users
+create table users (
+	id int auto_increment primary key,
+	username varchar(16) not null,
+	password varchar(16) not null,
+	time datetime not null,
+	avatar varchar(255),
+	birthday date,
+	gender int, 
+	age int
+)default charset=utf8;
+
+create table history(
+	id int auto_increment primary key,
+	ip varchar(30) not null,
+	nick varchar(10) not null,
+	time datetime not null,
+	msg varchar(100) not null,
+	www varchar(100) not null,
+	crud varchar(10) not null
+)default charset=utf8;
+
+
+create table msg(
+	id int auto_increment primary key,
+	nick varchar(10) not null,
+	msg varchar(100) not null,
+	time datetime not null,
+	avatar varchar(255)
+)default charset=utf8;
+
+
+create table template(
+	id int auto_increment primary key,
+	name varchar(10) not null,
+	msg varchar(100) not null,
+	www varchar(100) not null,
+	time datetime not null
+)default charset=utf8;
+
+
+
+
+
